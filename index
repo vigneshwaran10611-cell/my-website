@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Welcome to Bright Future College. Explore courses and admissions.">
+
+    <title>Bright Future College</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <a href="#home" class="logo">🎓 BFC</a>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="navbar" id="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#courses">Courses</a>
+            <a href="#admissions">Admissions</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- HOME SECTION -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="tagline">
+                    WELCOME TO BRIGHT FUTURE COLLEGE
+                </p>
+
+                <h1>
+                    Learn Today.<br>
+                    Lead Tomorrow.
+                </h1>
+
+                <p>
+                    Discover your potential, develop your skills
+                    and build a successful future with us.
+                </p>
+
+                <a href="#courses" class="btn">
+                    Explore Courses
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- COLLEGE STATISTICS -->
+        <section class="stats">
+
+            <div>
+                <h2>25+</h2>
+                <p>Years of Excellence</p>
+            </div>
+
+            <div>
+                <h2>30+</h2>
+                <p>Expert Faculty</p>
+            </div>
+
+            <div>
+                <h2>15+</h2>
+                <p>Courses</p>
+            </div>
+
+            <div>
+                <h2>2000+</h2>
+                <p>Students</p>
+            </div>
+
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="section about" id="about">
+
+            <p class="tagline">WHO WE ARE</p>
+
+            <h2>About Our College</h2>
+
+            <p class="section-description">
+                Bright Future College provides quality education,
+                practical learning and opportunities for students
+                to grow in technology, science and innovation.
+            </p>
+
+            <div class="features">
+
+                <article class="feature">
+                    <span>📚</span>
+                    <h3>Quality Education</h3>
+                    <p>
+                        Learn with clear concepts and practical examples.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <span>💻</span>
+                    <h3>Modern Labs</h3>
+                    <p>
+                        Develop technical skills through hands-on learning.
+                    </p>
+                </article>
+
+                <article class="feature">
+                    <span>🚀</span>
+                    <h3>Career Growth</h3>
+                    <p>
+                        Prepare for future careers and new opportunities.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- COURSES SECTION -->
+        <section class="section courses" id="courses">
+
+            <p class="tagline">LEARN AND GROW</p>
+
+            <h2>Our Popular Courses</h2>
+
+            <label class="search-label" for="courseSearch">
+                Search for a course
+            </label>
+
+            <input type="search"
+                   id="courseSearch"
+                   placeholder="Search courses...">
+
+            <div class="course-grid" id="courseGrid">
+
+                <article class="course-card">
+                    <div class="course-icon">💻</div>
+                    <h3>Computer Science</h3>
+                    <p>
+                        Programming, software development and web technology.
+                    </p>
+                    <a href="#contact" class="course-link">
+                        Enquire Now →
+                    </a>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon">🤖</div>
+                    <h3>AI & Data Science</h3>
+                    <p>
+                        Artificial intelligence, data analysis and machine learning.
+                    </p>
+                    <a href="#contact" class="course-link">
+                        Enquire Now →
+                    </a>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon">⚡</div>
+                    <h3>Electronics</h3>
+                    <p>
+                        Explore electronic circuits and embedded technology.
+                    </p>
+                    <a href="#contact" class="course-link">
+                        Enquire Now →
+                    </a>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon">⚙️</div>
+                    <h3>Mechanical Engineering</h3>
+                    <p>
+                        Learn about machines, design and manufacturing.
+                    </p>
+                    <a href="#contact" class="course-link">
+                        Enquire Now →
+                    </a>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon">🏗️</div>
+                    <h3>Civil Engineering</h3>
+                    <p>
+                        Discover buildings, structures and infrastructure.
+                    </p>
+                    <a href="#contact" class="course-link">
+                        Enquire Now →
+                    </a>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-icon">📊</div>
+                    <h3>Information Technology</h3>
+                    <p>
+                        Explore networks, databases and IT systems.
+                    </p>
+                    <a href="#contact" class="course-link">
+                        Enquire Now →
+                    </a>
+                </article>
+
+            </div>
+
+            <p id="noResults" class="message" hidden>
+                No matching courses found.
+            </p>
+
+        </section>
+
+        <!-- ADMISSIONS SECTION -->
+        <section class="admissions" id="admissions">
+
+            <div>
+                <p class="tagline">YOUR FUTURE STARTS HERE</p>
+
+                <h2>Ready to Begin Your Journey?</h2>
+
+                <p>
+                    Contact us to learn more about courses and admissions.
+                </p>
+            </div>
+
+            <a href="#contact" class="btn">
+                Apply / Enquire
+            </a>
+
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section contact" id="contact">
+
+            <p class="tagline">GET IN TOUCH</p>
+
+            <h2>Contact Our College</h2>
+
+            <p class="section-description">
+                Have a question? Fill out the form below.
+            </p>
+
+            <form id="contactForm">
+
+                <label for="name">Full Name</label>
+
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your name"
+                       required
+                       minlength="2">
+
+                <label for="email">Email Address</label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+
+                <label for="course">Interested Course</label>
+
+                <select id="course" name="course" required>
+
+                    <option value="">Select a course</option>
+                    <option>Computer Science</option>
+                    <option>AI & Data Science</option>
+                    <option>Electronics</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Civil Engineering</option>
+                    <option>Information Technology</option>
+
+                </select>
+
+                <label for="message">Your Message</label>
+
+                <textarea id="message"
+                          name="message"
+                          placeholder="Write your message"
+                          rows="4"
+                          required
+                          minlength="5"></textarea>
+
+                <button type="submit" class="btn">
+                    Submit Enquiry
+                </button>
+
+                <p id="formMessage"
+                   class="message"
+                   role="status"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <a href="#home" class="logo">🎓 BFC</a>
+
+        <p>
+            Bright Future College — Learn, Innovate, Succeed.
+        </p>
+
+        <p>
+            © <span id="year"></span>
+            Bright Future College. All rights reserved.
+        </p>
+
+    </footer>
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

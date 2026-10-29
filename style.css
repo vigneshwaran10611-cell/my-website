@@ -1,0 +1,486 @@
+
+/* =================================
+   1. GENERAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #102a63;
+    --secondary: #087f8c;
+    --accent: #ffc857;
+    --light: #f4f7fc;
+    --dark: #172238;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    line-height: 1.7;
+    background: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =================================
+   2. HEADER AND NAVIGATION
+================================= */
+
+.header {
+    background: white;
+    min-height: 75px;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px #00000012;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.navbar {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    color: var(--dark);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--secondary);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+/* =================================
+   3. HOME / HERO SECTION
+================================= */
+
+.hero {
+    min-height: 510px;
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            #071b45f2,
+            #102a63c9,
+            #102a6360
+        ),
+        url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero .tagline {
+    color: var(--accent);
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.tagline) {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+/* =================================
+   4. BUTTONS
+================================= */
+
+.btn {
+    display: inline-block;
+    padding: 12px 23px;
+    border: 2px solid var(--secondary);
+    border-radius: 6px;
+    background: var(--secondary);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px 8px 5px 0;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    background: #06616b;
+    border-color: #06616b;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--primary);
+    border-color: white;
+}
+
+/* =================================
+   5. COLLEGE STATISTICS
+================================= */
+
+.stats {
+    background: var(--primary);
+    color: white;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    text-align: center;
+    padding: 30px 7%;
+}
+
+.stats h2 {
+    color: var(--accent);
+    font-size: 32px;
+}
+
+/* =================================
+   6. COMMON SECTIONS
+================================= */
+
+.section {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.section h2,
+.admissions h2 {
+    font-size: 34px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.section-description {
+    max-width: 720px;
+    margin: 0 auto 35px;
+    color: #5b6578;
+}
+
+/* =================================
+   7. ABOUT SECTION
+================================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.feature {
+    padding: 30px 20px;
+    border-radius: 12px;
+    background: var(--light);
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature span {
+    font-size: 40px;
+}
+
+.feature h3,
+.course-card h3 {
+    color: var(--primary);
+    margin: 10px 0;
+}
+
+/* =================================
+   8. COURSES SECTION
+================================= */
+
+.courses {
+    background: var(--light);
+}
+
+.search-label {
+    display: block;
+    margin: 20px 0 8px;
+    font-weight: bold;
+}
+
+#courseSearch {
+    width: min(100%, 450px);
+    padding: 13px;
+    margin-bottom: 30px;
+    border: 1px solid #ccd4e0;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    text-align: left;
+}
+
+.course-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 20px #102a630d;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #102a631c;
+}
+
+.course-icon {
+    font-size: 38px;
+}
+
+.course-link {
+    display: inline-block;
+    color: var(--secondary);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.course-link:hover {
+    color: var(--primary);
+}
+
+/* =================================
+   9. ADMISSIONS SECTION
+================================= */
+
+.admissions {
+    padding: 55px 8%;
+    background: #e7f4f6;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.admissions p:not(.tagline) {
+    color: #5b6578;
+}
+
+.admissions .btn {
+    flex-shrink: 0;
+}
+
+/* =================================
+   10. CONTACT FORM
+================================= */
+
+.contact form {
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 30px;
+    text-align: left;
+    background: var(--light);
+    border-radius: 12px;
+}
+
+.contact label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 6px;
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #ccd4e0;
+    border-radius: 6px;
+
+    font: inherit;
+    background: white;
+}
+
+.contact input:focus,
+.contact select:focus,
+.contact textarea:focus,
+#courseSearch:focus {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
+}
+
+.contact form .btn {
+    margin-top: 20px;
+}
+
+.message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+/* =================================
+   11. FOOTER
+================================= */
+
+.footer {
+    text-align: center;
+    background: #091a3b;
+    color: white;
+    padding: 35px 15px;
+}
+
+.footer .logo {
+    color: var(--accent);
+}
+
+.footer p {
+    margin-top: 8px;
+}
+
+/* Hide elements marked with hidden */
+[hidden] {
+    display: none !important;
+}
+
+/* =================================
+   12. TABLET RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+
+        padding: 20px;
+        background: white;
+
+        flex-direction: column;
+        gap: 15px;
+
+        box-shadow: 0 8px 12px #00000012;
+    }
+
+    .navbar.open {
+        display: flex;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features,
+    .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admissions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =================================
+   13. MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 520px) {
+
+    .hero {
+        padding: 55px 6%;
+        min-height: 450px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
+
+    .section h2,
+    .admissions h2 {
+        font-size: 28px;
+    }
+
+    .features,
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats h2 {
+        font-size: 27px;
+    }
+
+    .contact form {
+        padding: 20px;
+    }
+}
